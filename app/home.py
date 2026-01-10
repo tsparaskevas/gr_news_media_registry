@@ -149,7 +149,7 @@ st.markdown(
 It ingests authoritative sources (ESR for TV/radio, MT for press/websites), normalizes geography and metadata,
 supports human-in-the-loop corrections via overrides, and publishes auditable outputs.
 
-**Published outputs (Option B)**  
+**Published outputs:**  
 - **Editorial registry**: operating outlets with **news OR sports** content and an active website  
 - Separate **News-only** and **Sports-only** registries  
 - A deduped **URL registry** that shows when one site is used across multiple media types

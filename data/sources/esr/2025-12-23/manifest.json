@@ -1,0 +1,11 @@
+{
+  "source_name": "esr_radio",
+  "url": "https://www.esr.gr/wp-content/uploads/bnl.xlsx",
+  "snapshot_date": "2025-12-23",
+  "filename": "bnl.xlsx",
+  "bytes": 573408,
+  "sha256": "68330b0eea9f10be632a662d5cd638945e13853c123a81f4a9bc5ca089cd560b",
+  "downloaded_at_utc": "2025-12-23T20:16:20+00:00",
+  "http_etag": null,
+  "http_last_modified": "Tue, 23 Dec 2025 08:20:17 GMT"
+}

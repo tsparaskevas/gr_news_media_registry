@@ -28,10 +28,19 @@ Thumbs.db
 # Jupyter
 .ipynb_checkpoints/
 
-# Data (keep demo published artifacts if you want)
-data/
-!data/published/
-!data/published/**
-
 # Hidden Pages
 app/pages_hidden/*.py
+
+# Data: ignore everything by default
+# data/**
+
+# Keep published outputs and overrides
+!data/published/
+!data/published/**
+!data/overrides/
+!data/overrides/**
+
+# Keep GeoJSON 
+!data/geo/
+!data/geo/**
+
