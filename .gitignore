@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Logs
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data (keep demo published artifacts if you want)
+data/
+!data/published/
+!data/published/**
+
+# Hidden Pages
+app/pages_hidden/*.py
