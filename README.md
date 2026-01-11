@@ -6,8 +6,6 @@ built from official public registers and enriched through structured manual revi
 The project combines automated ingestion from authoritative sources with a transparent,
 human-in-the-loop review process implemented in a Streamlit application.
 
----
-
 ## Purpose
 
 The goal of this project is to create a **clean, documented, and reproducible registry of active Greek news media outlets with websites**, suitable for:
@@ -19,8 +17,6 @@ The goal of this project is to create a **clean, documented, and reproducible re
 
 The registry focuses on **editorial outlets** (news and sports), excludes inactive media,
 and clearly documents all exclusions and manual decisions.
-
----
 
 ## What the Registry Contains
 
@@ -37,8 +33,6 @@ For each outlet, the final registry may include:
 - operational status
 - social media links (Facebook, X, YouTube)
 - ownership name
-
----
 
 ## Data Pipeline (Bronze → Silver → Gold → Final)
 
@@ -67,8 +61,6 @@ The pipeline is deliberately staged to ensure auditability:
 - Only **outlets with valid websites**
 - Fully traceable back to source rows
 
----
-
 ## Streamlit App
 
 The Streamlit app is the primary interface for:
@@ -84,20 +76,21 @@ Key pages include:
 - Pipeline
 - Prefecture Aliases
 - Review Overrides
+- Manual / Independent Intake
 - Final Registry
 - Map (Prefectures)
-- Manual / Independent Intake
-
----
 
 ## Demo (Streamlit Cloud)
 
-A read-only demo is hosted on Streamlit Cloud.
+A read-only demo is hosted on Streamlit Cloud: [https://gr-news-media-registry.streamlit.app/](https://gr-news-media-registry.streamlit.app/)
 
-### What works
+> **Demo note:** The Streamlit Cloud demo is deployed from the `demo` branch and exposes only read-only exploration pages. 
+> To access the full pipeline and editing workflows, clone the repository and run the app locally from the `main` branch.
+
+### What works in demo
 - Browse the published Final Registry (editorial/news/sports)
 - Inspect exclusions and URL registry
-- View the prefecture choropleth map and drill down by prefecture
+- View the prefecture choropleth map and inspect outlets by prefecture
 - Download published CSV outputs
 
 ### What is hidden/disabled in the demo (and why)
@@ -108,8 +101,6 @@ The following pages are hidden in the cloud demo:
 - Manual / independent intake
 
 Reason: Streamlit Cloud provides an ephemeral filesystem and no persistence by default, so edits to `data/overrides/` would not reliably persist across restarts or redeploys. The cloud demo therefore ships with pre-built published artifacts under `data/published/` and focuses on exploration/inspection only.
-
----
 
 ## Full functionality locally
 
@@ -142,8 +133,6 @@ Use the Pipeline page inside the app to:
 
 Published artifacts are written under:
 - data/published/
-
----
 
 ## Citation
 
@@ -189,8 +178,6 @@ https://github.com/tsparaskevas/gr_news_media_registry
 
 You may optionally also cite the specific release tag or commit hash used to generate the data.
 
----
-
 ## Manual Review Philosophy
 
 Not all information can be reliably inferred automatically.
@@ -203,8 +190,6 @@ The app therefore supports:
 
 Manual decisions are treated as **first-class data**, not ad-hoc fixes.
 
----
-
 ## Scope & Limitations
 
 - The registry is **not a list of all Greek media ever existing**
@@ -214,8 +199,6 @@ Manual decisions are treated as **first-class data**, not ad-hoc fixes.
 - Public broadcasters are treated separately
 
 See `METHODOLOGY.md` for full details.
-
----
 
 ## License
 
