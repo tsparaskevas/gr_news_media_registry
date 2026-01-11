@@ -98,18 +98,6 @@ if canon_path.exists():
 
 alias_path = Path("data/overrides/geo_prefecture_aliases.csv")
 
-#if alias_path.exists():
-#    alias_df = pd.read_csv(alias_path, dtype=str).fillna("")
-#    st.dataframe(alias_df, width="stretch")
-#
-#    st.download_button(
-#        "Download mapping CSV",
-#        data=alias_df.to_csv(index=False).encode("utf-8"),
-#        file_name="geo_prefecture_aliases.csv",
-#        mime="text/csv",
-#        key="dl_geo_pref_aliases",
-#    )
-
 
 def _base_domain(u: object) -> str:
     u = str(u or "").strip().lower()
@@ -257,9 +245,11 @@ with st.expander("Canonical prefecture mapping (GeoJSON → registry prefecture_
 df["media_bucket"] = df.get("media_type", "unknown").astype(str).str.strip().str.lower()
 df.loc[(df["media_bucket"] == "website") & (df["web_native"] == 1), "media_bucket"] = "web-native"
 
-# normalize filterable fields (defensive)
+# normalize filterable fields
 df["content_type"] = df.get("content_type", "").astype(str).str.strip().str.lower()
 df["range_type"] = df.get("range_type", "").astype(str).str.strip().str.lower()
+
+st.subheader("Filters")
 
 f1, f2, f3 = st.columns(3)
 
